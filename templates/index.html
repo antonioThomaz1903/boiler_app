@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo à API Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Boiler Da Silva</h1>
+    <p>Não precisamos mais de ALEXA. Aposentar já!!!</p>
+
+    <!-- Botões estilizados -->
+    <button class="btn" onclick="window.location.href='/ligar_boiler'">Ligar Boiler</button>
+    <button class="btn" onclick="window.location.href='/desligar_boiler'">Desligar Boiler</button>
+    <button class="btn" onclick="window.location.href='/status_boiler'">Status Boiler</button>
+</body>
+</html>
