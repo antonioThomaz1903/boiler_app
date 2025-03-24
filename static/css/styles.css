@@ -4,6 +4,7 @@ body {
     background-color: #f4f4f4;
     text-align: center;
     padding: 50px;
+    outline: black inset medium;
 }
 
 h1 {
@@ -28,6 +29,21 @@ button.btn:hover {
     background-color: #45a049; /* Cor de fundo mais escura quando passar o mouse */
 }
 
+#status_block {
+    display: flex;
+    justify-content: center;
+}
+
+#boiler_status{
+    margin-left: 4px;
+}
+
+button.desligar {
+    background-color: #e74c3c;
+}
+button.desligar:hover {
+    background-color: #c61306;
+}
 /* Efeito quando o botão é pressionado */
 button.btn:active {
     background-color: #3e8e41; /* Cor de fundo quando pressionado */

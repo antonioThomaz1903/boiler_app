@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-vindo à API Flask</title>
+    <title>Boiler</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -11,8 +11,19 @@
     <p>Não precisamos mais de ALEXA. Aposentar já!!!</p>
 
     <!-- Botões estilizados -->
-    <button class="btn" onclick="window.location.href='/ligar_boiler'">Ligar Boiler</button>
-    <button class="btn" onclick="window.location.href='/desligar_boiler'">Desligar Boiler</button>
-    <button class="btn" onclick="window.location.href='/status_boiler'">Status Boiler</button>
+    <button id="ligar_boiler" class="btn">Ligar</button>
+    <button id="desligar_boiler" class="btn desligar">Desligar</button>
+
+    <div id="status_block">
+        <div>
+            O boiler está
+        </div>
+        <div id="boiler_status">
+            Carregando...
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/gerenciar_boiler.js') }}"></script>
 </body>
 </html>

@@ -5,6 +5,9 @@ import socket
 app = Flask(__name__)
 Swagger(app)
 
+UDP_IP = "192.168.15.2" # IP do ESP
+UDP_PORT = 3232         # Porta
+
 @app.route('/')
 def hello_world():
     """
@@ -25,8 +28,6 @@ def ligar_boiler():
       200:
         description: Comando UDP enviado com sucesso
     """
-    UDP_IP = "192.168.15.2"
-    UDP_PORT = 3232
     MESSAGE = b'ON'
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -43,8 +44,7 @@ def desligar_boiler():
       200:
         description: Comando UDP enviado com sucesso
     """
-    UDP_IP = "192.168.15.2"
-    UDP_PORT = 3232
+
     MESSAGE = b'OFF'
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -62,8 +62,6 @@ def status_boiler():
       200:
         description: Retorna o status do boiler
     """
-    UDP_IP = "192.168.15.2"
-    UDP_PORT = 3232  # Porta do destino
     MESSAGE = b'STATUS'
 
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
