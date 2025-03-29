@@ -48,3 +48,39 @@ button.desligar:hover {
 button.btn:active {
     background-color: #3e8e41; /* Cor de fundo quando pressionado */
 }
+
+.linha {
+    display: flex;
+}
+
+.centralizado {
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    margin-top: 10px;
+    font-size: 40px;
+    font-family: monospace;
+    width: 250px;
+    outline: black inset medium;
+    border-radius: 10px;
+}
+
+.fundo-timer{
+    background-color: #ff9d9d;
+    margin: 4px;
+    padding: 2px;
+}
+
+.quadrado-legal{
+
+}
+
+.sombra{
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.margem-top{
+    margin-top: 20px;
+}
